@@ -1,9 +1,14 @@
 name: hello world
+
 on:
-    workflow_dispatch:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
 jobs:
-    say-hello:
-        runs-on: ubuntu-25.10
-        steps:
-            - name: say hello
-              run: echo "hello world"
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo "hello world"
