@@ -1,9 +1,9 @@
 name: hello world
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 jobs:
-    say-hello:
-        runs-on: ubuntu-latest
-        steps:
-            - name: say hello
-              run: echo "hello world"
+  say-hello:
+    runs-on: [self-hosted, soul]
+    steps:
+      - name: say hello
+        run: echo "hello world"
