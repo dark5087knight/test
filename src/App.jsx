@@ -22,9 +22,9 @@ export const CICD_CANARY_CONFIG = {
   environment: "Production", // e.g. "Staging", "Production", "Development"
   statusIndicatorColor: "#10b981", // Change this hex to test the status light (e.g. green: #10b981, yellow: #f59e0b, red: #ef4444)
   testSwatches: [
-    { name: "Primary Swatch", color: "#ef4444" }, // Red
+    { name: "Primary Swatch", color: "#10b981" }, // Green
     { name: "Secondary Swatch", color: "#000000" }, // Black
-    { name: "Accent Swatch", color: "#b91c1c" }, // Dark Red
+    { name: "Accent Swatch", color: "#047857" }, // Dark Green
     { name: "Success Swatch", color: "#10b981" }
   ],
   pipelinePassing: true // Toggle this boolean to see pipeline banner change
