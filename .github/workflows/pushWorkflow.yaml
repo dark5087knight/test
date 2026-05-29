@@ -1,17 +1,22 @@
 name: deploy to production
+
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
+
 jobs:
-    update-production:
-        runs-on: self-hosted
-        steps:
-            - name: cd to project directory
-              run: cd /opt/test
-            - name: install dependencies
-              run: sudo npm install
-            - name: pull latest changes
-              run: sudo git pull origin main
-            - name: restart application
-              run: sudo pm2 restart all
+  update-production:
+    runs-on: self-hosted
+
+    steps:
+      - name: pull latest changes
+        run: git pull origin main
+        working-directory: /opt/test
+
+      - name: install dependencies
+        run: npm install
+        working-directory: /opt/test
+
+      - name: restart application
+        run: pm2 restart all
