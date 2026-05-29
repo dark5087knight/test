@@ -7,13 +7,14 @@
   --bg-tertiary: #161619;
   --bg-glass: rgba(13, 13, 15, 0.7);
   --border-color: rgba(255, 255, 255, 0.06);
-  --border-focus: rgba(234, 179, 8, 0.4);
+  --border-focus: rgba(255, 255, 255, 0.4);
   
-  --accent-color: #eab308;
-  --accent-light: #fde047;
-  --accent-dark: #ca8a04;
-  --accent-glow: rgba(234, 179, 8, 0.2);
-  --accent-glow-strong: rgba(234, 179, 8, 0.4);
+  --accent-color: #ffffff;
+  --accent-light: #f3f4f6;
+  --accent-dark: #e5e7eb;
+  --accent-glow: rgba(255, 255, 255, 0.2);
+  --accent-glow-strong: rgba(255, 255, 255, 0.4);
+  --accent-text: #000000;
   
   --text-primary: #f3f4f6;
   --text-secondary: #a1a1aa;
@@ -39,7 +40,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 25px 0 rgba(234, 179, 8, 0.12);
+  --shadow-glow: 0 0 25px 0 rgba(255, 255, 255, 0.12);
 }
 
 .light-mode {
@@ -48,20 +49,21 @@
   --bg-tertiary: #f1f5f9;
   --bg-glass: rgba(255, 255, 255, 0.8);
   --border-color: rgba(0, 0, 0, 0.07);
-  --border-focus: rgba(202, 138, 4, 0.4);
+  --border-focus: rgba(0, 0, 0, 0.4);
   
-  --accent-color: #ca8a04;
-  --accent-light: #eab308;
-  --accent-dark: #a16207;
-  --accent-glow: rgba(202, 138, 4, 0.1);
-  --accent-glow-strong: rgba(202, 138, 4, 0.25);
+  --accent-color: #000000;
+  --accent-light: #1f2937;
+  --accent-dark: #374151;
+  --accent-glow: rgba(0, 0, 0, 0.1);
+  --accent-glow-strong: rgba(0, 0, 0, 0.25);
+  --accent-text: #ffffff;
   
   --text-primary: #000000;
   --text-secondary: #2d2d2d;
   --text-muted: #757575;
   
   --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 25px 0 rgba(202, 138, 4, 0.05);
+  --shadow-glow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -122,7 +124,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--accent-text);
   box-shadow: var(--shadow-glow);
   font-weight: 800;
   font-size: 20px;
@@ -170,7 +172,7 @@ header {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
-  color: white;
+  color: var(--accent-text);
   border: none;
   padding: 10px 20px;
   border-radius: var(--radius-md);
@@ -441,7 +443,7 @@ header {
 
 .swap-btn {
   background: var(--accent-color);
-  color: white;
+  color: var(--accent-text);
   width: 38px;
   height: 38px;
   border-radius: var(--radius-full);
@@ -654,7 +656,7 @@ header {
 .sms-bubble.outgoing {
   align-self: flex-end;
   background: var(--accent-color);
-  color: white;
+  color: var(--accent-text);
   border-bottom-right-radius: 4px;
 }
 
@@ -681,7 +683,7 @@ header {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
   z-index: 0;
   pointer-events: none;
 }
@@ -749,7 +751,7 @@ header {
 }
 .mock-button {
   background: var(--accent-color);
-  color: white;
+  color: var(--accent-text);
   border: none;
   padding: 8px 16px;
   border-radius: var(--radius-sm);
