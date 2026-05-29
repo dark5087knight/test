@@ -1,9 +1,0 @@
-name: hello world
-on:
-    workflow_dispatch:
-jobs:
-    say-hello:
-        runs-on: self-hosted
-        steps:
-            - name: say hello
-              run: echo "hello world" > /home/dark/hello.txt
