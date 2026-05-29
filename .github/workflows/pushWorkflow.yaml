@@ -11,12 +11,12 @@ jobs:
 
         steps:
             - name: pull latest changes
-              run: git pull origin main
+              run: sudo git pull origin main
               working-directory: /opt/test
 
             - name: install dependencies
-              run: npm install
+              run: sudo npm install
               working-directory: /opt/test
 
             - name: restart application
-              run: pm2 restart all
+              run: sudo pm2 restart all
