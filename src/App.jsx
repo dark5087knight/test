@@ -22,9 +22,9 @@ export const CICD_CANARY_CONFIG = {
   environment: "Production", // e.g. "Staging", "Production", "Development"
   statusIndicatorColor: "#10b981", // Change this hex to test the status light (e.g. green: #10b981, yellow: #f59e0b, red: #ef4444)
   testSwatches: [
-    { name: "Primary Swatch", color: "#8b5cf6" }, // Change these hex codes to verify
-    { name: "Secondary Swatch", color: "#3b82f6" }, // that your GitHub Actions CI/CD
-    { name: "Accent Swatch", color: "#ec4899" }, // builds and deploys successfully!
+    { name: "Primary Swatch", color: "#ef4444" }, // Red
+    { name: "Secondary Swatch", color: "#000000" }, // Black
+    { name: "Accent Swatch", color: "#b91c1c" }, // Dark Red
     { name: "Success Swatch", color: "#10b981" }
   ],
   pipelinePassing: true // Toggle this boolean to see pipeline banner change
